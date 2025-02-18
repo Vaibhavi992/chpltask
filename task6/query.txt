@@ -1,0 +1,40 @@
+create database chpl;
+
+INSERT INTO `logo`( `logo_path`) VALUES ('logo2.jpg');
+
+//MENU ITEM TABLE 
+
+CREATE TABLE menu_item ( id INT PRIMARY KEY AUTO_INCREMENT, menu_image varchar (255), name varchar(50), description text, price DECIMAL (10,2) );
+
+// INSERT QUERY
+
+INSERT INTO `menu_item`( `menu_image`, `name`, `description`, `price`) VALUES ('pizza.jpg','pizza','Delicious cheese pizza','250.00'),('pasta.jpg','pasta','Creamy pasta with fresh herbs','150.00'),('food3jpg.jpg','burger','Delicious cheese burger','130.00');
+
+//ABOUT 
+
+CREATE TABLE about_data( id INT AUTO_INCREMENT PRIMARY KEY, description TEXT NOT NULL);
+
+INSERT INTO about_data(id, description)
+VALUES
+(1, 'Food is essential for human survival.'),
+(2, 'A balanced diet provides the necessary nutrients for growth and development.'),
+(3, 'Eating a variety of foods promotes good health and well-being.');
+
+// contact 
+
+CREATE TABLE contact_data (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  address VARCHAR(255),
+  phone VARCHAR(20),
+  email VARCHAR(100),
+  website VARCHAR(100),
+  facebook_link VARCHAR(255),
+  twitter_link VARCHAR(255),
+  instagram_link VARCHAR(255)
+);
+
+INSERT INTO contact_data (address, phone, email, website, facebook_link, twitter_link, instagram_link)
+VALUES 
+('135, Main Street, New York', '123-456-7890', 'info@example.com', 'www.example.com', 'https://www.facebook.com/example', 'https://twitter.com/example', 'https://www.instagram.com/example'),
+('456, Wall Street, New York', '987-654-3210', 'contact@example.com', 'www.example2.com', 'https://www.facebook.com/example2', 'https://twitter.com/example2', 'https://www.instagram.com/example2'),
+('789, Broadway, New York', '555-123-4567', 'support@example.com', 'www.example3.com', 'https://www.facebook.com/example3', 'https://twitter.com/example3', 'https://www.instagram.com/example3');
